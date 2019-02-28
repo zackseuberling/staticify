@@ -97,7 +97,7 @@ const staticify = (root, options) => {
 		const originalFilename = fileNameParts.slice(0, fileNameParts.length - 2);
 		originalFilename.push(fileNameParts[fileNameParts.length - 1]);
 
-		if (fileNameParts.length >= 3 && fileNameHash.length === HASH_LEN && cachedMakeHash(originalFilename) === fileNameHash) {
+		if (fileNameParts.length >= 3 && fileNameHash.length === HASH_LEN && cachedMakeHash(path.join(path.dirname(p), originalFilename.join('.'))) === fileNameHash) {
 			return path.join(path.dirname(p), originalFilename.join('.'));
 		}
 
