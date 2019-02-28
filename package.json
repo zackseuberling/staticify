@@ -42,11 +42,20 @@
   "engines": {
     "node": ">=6"
   },
+  "eslintConfig": {
+    "env": {
+      "mocha": true,
+      "node": true
+    },
+    "extends": "xo"
+
+  },
   "xo": {
     "space": 4,
     "rules": {
       "capitalized-comments": "off",
       "spaced-comment": "off",
+      "object-curly-spacing": "off",
       "func-style": [
         "error",
         "expression"
